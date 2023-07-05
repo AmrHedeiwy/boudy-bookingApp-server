@@ -44,7 +44,7 @@ async function main() {
     Firstname: 'amr',
     Lastname: 'Hedeiwy',
     Email: 'amr.hedewy@gmail.com',
-    PhoneNumber: '0120322132'
+    Phone: '0120322132'
   });
 
   const level = await db.Level.findOne({ where: { Name: levelName } });
