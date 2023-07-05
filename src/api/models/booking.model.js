@@ -52,12 +52,12 @@ export default (sequelize, DataTypes) => {
       timestamps: false
     }
   );
-  // Booking.associate = (model) => {
-  //   Booking.belongsTo(model.Student, { foreignKey: 'StudentID' });
-  //   Booking.belongsTo(model.Teacher, { foreignKey: 'TeacherID' });
-  //   Booking.belongsTo(model.Subject, { foreignKey: 'SubjectID' });
-  //   Booking.belongsTo(model.Level, { foreignKey: 'LevelID' });
-  // };
+  Booking.associate = (model) => {
+    Booking.belongsTo(model.Student, { foreignKey: 'StudentID' });
+    Booking.belongsTo(model.Teacher, { foreignKey: 'TeacherID' });
+    Booking.belongsTo(model.Subject, { foreignKey: 'SubjectID' });
+    Booking.belongsTo(model.Level, { foreignKey: 'LevelID' });
+  };
 
   return Booking;
 };
